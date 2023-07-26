@@ -34,7 +34,35 @@ btnSubmit.addEventListener("click", (e) => {
   //   console.log("a : " + paValue + oaValue);
 });
 
-function evalCombat(ccp, cco, pd, od, pa, oa) {
-  return [1, 2, 3];
+function combat(ccp, pd, pa) {
+  let pad = 0 + pa;
+  let ccpCombi = ccp + pad * 10;
+  let pComp = ccpCombi - pd;
+  let pav = parseInt(pComp / 10);
+  return pav;
 }
-console.log(evalCombat(10, 20, 30, 40, 50, 60));
+
+function evalCombat(ccp, cco, pd, od, pa, oa) {
+  //   let pad = 0 + pa;
+  //   let ccpCombi = ccp + pad * 10;
+  //   let pComp = ccpCombi - pd;
+  //   let pav = parseInt(pComp / 10);
+  //   console.log(pComp, pav);
+  let player = combat(ccp, pd, pa);
+  let oppo = combat(cco, od, oa);
+  //   let oad = 0 + oa;
+  //   let ccoCombi = cco + oad * 10;
+  //   let oComp = ccoCombi - od;
+  //   let oav = parseInt(oComp / 10);
+  //   console.log(oComp, oav);
+
+  let res = player - oppo;
+  return [player, oppo, res];
+}
+ccpTest = 10;
+pdTest = 30;
+paTest = 1;
+ccoTest = 20;
+odTest = 60;
+oaTest = 2;
+console.log(evalCombat(ccpTest, ccoTest, pdTest, odTest, paTest, oaTest));
