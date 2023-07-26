@@ -33,11 +33,15 @@ btnSubmit.addEventListener("click", (e) => {
   //   console.log("cc : " + pValue + oValue);
   //   console.log("dice : " + pdValue + odValue);
   //   console.log("a : " + paValue + oaValue);
+
+  //   *Throw test
   let test = evalCombat(pValue, oValue, pdValue, odValue, paValue, oaValue);
+  //   * Inject the result of the test in html
   injectResult(test[0], test[1], test[2], pReso, oReso, totResult);
   //   console.log(test[0], test[1], test[2], pReso, oReso, totResult);
 });
 
+// * expect int*3, return int
 function fight(cc, d, a) {
   let ad = 0 + parseInt(a);
   let ccCombi = parseInt(cc) + ad * 10;
@@ -46,7 +50,7 @@ function fight(cc, d, a) {
   let pav = parseInt(comp / 10);
   return pav;
 }
-
+// *expect int*6, retrun array[int*3]
 function evalCombat(ccp, cco, pd, od, pa, oa) {
   let player = fight(ccp, pd, pa);
   let oppo = fight(cco, od, oa);
@@ -54,6 +58,7 @@ function evalCombat(ccp, cco, pd, od, pa, oa) {
   let res = player - oppo;
   return [player, oppo, res];
 }
+// * expect dom target *3 (pt,ot,ft), expect/inject int*3 (pr,or,fr)
 function injectResult(pr, or, fr, pt, ot, ft) {
   pt.innerText = `${pr}`;
   ot.innerText = `${or}`;
