@@ -29,17 +29,20 @@ btnSubmit.addEventListener("click", (e) => {
   var odValue = resODice.value;
   var paValue = ccPAv.value;
   var oaValue = ccOAv.value;
+
   //   console.log("cc : " + pValue + oValue);
   //   console.log("dice : " + pdValue + odValue);
   //   console.log("a : " + paValue + oaValue);
-  console.log(evalCombat(pValue, oValue, pdValue, odValue, paValue, oaValue));
+  let test = evalCombat(pValue, oValue, pdValue, odValue, paValue, oaValue);
+  injectResult(test[0], test[1], test[2], pReso, oReso, totResult);
+  console.log(test[0], test[1], test[2], pReso, oReso, totResult);
 });
 
 function fight(cc, d, a) {
   let ad = 0 + parseInt(a);
   let ccCombi = parseInt(cc) + ad * 10;
   let comp = ccCombi - parseInt(d);
-  console.log(ad, ccCombi, comp);
+  //   console.log(ad, ccCombi, comp);
   let pav = parseInt(comp / 10);
   return pav;
 }
@@ -50,6 +53,11 @@ function evalCombat(ccp, cco, pd, od, pa, oa) {
 
   let res = player - oppo;
   return [player, oppo, res];
+}
+function injectResult(pr, or, fr, pt, ot, ft) {
+  pt.innerText = `${pr}`;
+  ot.innerText = `${or}`;
+  ft.innerText = `${fr}`;
 }
 // ccpTest = 10;
 // pdTest = 30;
