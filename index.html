@@ -44,14 +44,14 @@
                   <h6 class="my-0">Joueur</h6>
                   <!-- <small class="text-body-secondary">Brief description</small> -->
                 </div>
-                <span class="text-body-secondary">0</span>
+                <span class="text-body-secondary" id="j_reso">0</span>
               </li>
               <li class="list-group-item d-flex justify-content-between lh-sm">
                 <div>
                   <h6 class="my-0">Opposant</h6>
                   <!-- <small class="text-body-secondary">Brief description</small> -->
                 </div>
-                <span class="text-body-secondary">0</span>
+                <span class="text-body-secondary" id="o_reso">0</span>
               </li>
               <!-- <li class="list-group-item d-flex justify-content-between lh-sm">
                 <div>
@@ -71,7 +71,7 @@
               </li>-->
               <li class="list-group-item d-flex justify-content-between text-success">
                 <span>Total</span>
-                <strong>0</strong>
+                <strong id="tot_result">0</strong>
               </li> 
             </ul>
 
@@ -283,11 +283,11 @@
 
               <div class="row gy-3">
                 <div class="col-md-6">
-                  <label for="cc-name" class="form-label">CC joueur</label>
+                  <label for="cc-player" class="form-label">CC joueur</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="cc-name"
+                    id="cc-player"
                     placeholder=""
                     required=""
                   />
@@ -298,13 +298,13 @@
                 </div>
 
                 <div class="col-md-6">
-                  <label for="cc-number" class="form-label"
+                  <label for="cc-oppo" class="form-label"
                     >CC oposant</label
                   >
                   <input
                     type="text"
                     class="form-control"
-                    id="cc-number"
+                    id="cc-oppo"
                     placeholder=""
                     required=""
                   />
@@ -314,13 +314,13 @@
                 </div>
 
                 <div class="col-md-6">
-                  <label for="cc-expiration" class="form-label"
+                  <label for="res_pdice" class="form-label"
                     >Résultat des dès du joueur</label
                   >
                   <input
                     type="text"
                     class="form-control"
-                    id="cc-expiration"
+                    id="res_pdice"
                     placeholder=""
                     required=""
                   />
@@ -328,24 +328,24 @@
                 </div>
 
                 <div class="col-md-6">
-                  <label for="cc-cvv" class="form-label">Résultat des dès de l'opposant</label>
+                  <label for="res_odice" class="form-label">Résultat des dès de l'opposant</label>
                   <input
                     type="text"
                     class="form-control"
-                    id="cc-cvv"
+                    id="res_odice"
                     placeholder=""
                     required=""
                   />
                   <div class="invalid-feedback">Résultat requis</div>
                 </div>
                 <div class="col-md-6">
-                    <label for="cc-j-avantage" class="form-label"
+                    <label for="cc-j-advantage" class="form-label"
                       >Avantage(s) Utilisé(s) par le joueur</label
                     >
                     <input
                       type="text"
                       class="form-control"
-                      id="cc-j-avantage"
+                      id="cc-j-advantage"
                       placeholder=""
                       required=""
                     />
@@ -390,5 +390,6 @@
       </footer>
     </div>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>
