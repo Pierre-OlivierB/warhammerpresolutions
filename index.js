@@ -35,7 +35,7 @@ btnSubmit.addEventListener("click", (e) => {
   //   console.log("a : " + paValue + oaValue);
   let test = evalCombat(pValue, oValue, pdValue, odValue, paValue, oaValue);
   injectResult(test[0], test[1], test[2], pReso, oReso, totResult);
-  console.log(test[0], test[1], test[2], pReso, oReso, totResult);
+  //   console.log(test[0], test[1], test[2], pReso, oReso, totResult);
 });
 
 function fight(cc, d, a) {

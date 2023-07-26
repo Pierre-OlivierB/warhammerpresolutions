@@ -1,59 +1,53 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Warhammer fighting resolution</title>
 
-    <link
-      rel="stylesheet"
-      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="container">
-      <main>
-        <!-- header -->
-        <div class="py-5 text-center">
-          <img
-            class="d-block mx-auto mb-4"
-            src="./img/logo.png"
-            alt="brand G logo"
-            width="50"
-            height="50"
-          />
-          <h1>Warhammer calculator</h1>
-          <p class="lead">
-            Ce formulaire permet de donner les avantages ou désavantages des
-            personnages durant une résolution de combat dans le Role Play
-            Warhammer Fantasy.
-          </p>
-        </div>
-        <!-- end header -->
-        <div class="row g-5">
-            <!-- cart -->
-          <div class="col-md-5 col-lg-4 order-md-last d-flex align-items-center justify-content-center flex-column">
-            <h4 class="d-flex justify-content-between align-items-center mb-3">
-              <span class="text-primary">Résolution</span>
-              <span class="badge bg-primary rounded-pill">?</span>
-            </h4>
-            <ul class="list-group mb-3 w-50">
-              <li class="list-group-item d-flex justify-content-between lh-sm">
-                <div>
-                  <h6 class="my-0">Joueur</h6>
-                  <!-- <small class="text-body-secondary">Brief description</small> -->
-                </div>
-                <span class="text-body-secondary" id="j_reso">0</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between lh-sm">
-                <div>
-                  <h6 class="my-0">Opposant</h6>
-                  <!-- <small class="text-body-secondary">Brief description</small> -->
-                </div>
-                <span class="text-body-secondary" id="o_reso">0</span>
-              </li>
-              <!-- <li class="list-group-item d-flex justify-content-between lh-sm">
+        <main>
+            <!-- header -->
+            <div class="py-5 text-center">
+                <img class="d-block mx-auto mb-4" src="./img/logo.png" alt="brand G logo" width="50" height="50" />
+                <h1>Warhammer calculator</h1>
+                <p class="lead">
+                    Ce formulaire permet de donner les avantages ou désavantages des
+                    personnages durant une résolution de combat dans le Role Play
+                    Warhammer Fantasy.
+                </p>
+            </div>
+            <!-- end header -->
+            <div class="row g-5">
+                <!-- cart -->
+                <div
+                    class="col-md-5 col-lg-4 order-md-last d-flex align-items-center justify-content-center flex-column">
+                    <h4 class="d-flex justify-content-between align-items-center mb-3" id="show-result">
+                        <span class="text-primary">Résolution</span>
+                        <span class="badge bg-primary rounded-pill">?</span>
+                    </h4>
+                    <ul class="list-group mb-3 w-50">
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Joueur</h6>
+                                <!-- <small class="text-body-secondary">Brief description</small> -->
+                            </div>
+                            <span class="text-body-secondary" id="j_reso">0</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                            <div>
+                                <h6 class="my-0">Opposant</h6>
+                                <!-- <small class="text-body-secondary">Brief description</small> -->
+                            </div>
+                            <span class="text-body-secondary" id="o_reso">0</span>
+                        </li>
+                        <!-- <li class="list-group-item d-flex justify-content-between lh-sm">
                 <div>
                   <h6 class="my-0">Third item</h6>
                   <small class="text-body-secondary">Brief description</small>
@@ -69,13 +63,13 @@
                 </div>
                 <span class="text-success">-$5</span>
               </li>-->
-              <li class="list-group-item d-flex justify-content-between text-success">
-                <span>Total</span>
-                <strong id="tot_result">0</strong>
-              </li> 
-            </ul>
+                        <li class="list-group-item d-flex justify-content-between text-success">
+                            <span>Total</span>
+                            <strong id="tot_result">0</strong>
+                        </li>
+                    </ul>
 
-            <!-- <form class="card p-2">
+                    <!-- <form class="card p-2">
               <div class="input-group">
                 <input
                   type="text"
@@ -85,14 +79,14 @@
                 <button type="submit" class="btn btn-secondary">Redeem</button>
               </div>
             </form> -->
-          </div>
-          <!-- end cart -->
-          <!-- center -->
-          <div class="col-md-7 col-lg-8">
-            <!-- <h4 class="mb-3">Billing address</h4> -->
-            <form class="needs-validation was-validated" novalidate="">
-              <div class="row g-3">
-                <!-- <div class="col-sm-6">
+                </div>
+                <!-- end cart -->
+                <!-- center -->
+                <div class="col-md-7 col-lg-8">
+                    <!-- <h4 class="mb-3">Billing address</h4> -->
+                    <form class="needs-validation was-validated" novalidate="">
+                        <div class="row g-3">
+                            <!-- <div class="col-sm-6">
                   <label for="firstName" class="form-label">First name</label>
                   <input
                     type="text"
@@ -107,7 +101,7 @@
                   </div>
                 </div> -->
 
-                <!-- <div class="col-sm-6">
+                            <!-- <div class="col-sm-6">
                   <label for="lastName" class="form-label">Last name</label>
                   <input
                     type="text"
@@ -122,7 +116,7 @@
                   </div>
                 </div> -->
 
-                <!-- <div class="col-12">
+                            <!-- <div class="col-12">
                   <label for="username" class="form-label">Username</label>
                   <div class="input-group has-validation">
                     <span class="input-group-text">@</span>
@@ -139,7 +133,7 @@
                   </div>
                 </div> -->
 
-                <!-- <div class="col-12">
+                            <!-- <div class="col-12">
                   <label for="email" class="form-label"
                     >Email
                     <span class="text-body-secondary">(Optional)</span></label
@@ -243,23 +237,15 @@
 
               <hr class="my-4" /> -->
 
-              <h4 class="mb-3">Combats</h4>
+                            <h4 class="mb-3">Combats</h4>
 
-              <div class="my-3">
-                <div class="form-check">
-                  <input
-                    id="credit"
-                    name="paymentMethod"
-                    type="radio"
-                    class="form-check-input"
-                    checked=""
-                    required=""
-                  />
-                  <label class="form-check-label" for="credit"
-                    >Attaquant</label
-                  >
-                </div>
-                <!-- <div class="form-check">
+                            <div class="my-3">
+                                <div class="form-check">
+                                    <input id="credit" name="paymentMethod" type="radio" class="form-check-input"
+                                        checked="" required="" />
+                                    <label class="form-check-label" for="credit">Attaquant</label>
+                                </div>
+                                <!-- <div class="form-check">
                   <input
                     id="debit"
                     name="paymentMethod"
@@ -279,117 +265,79 @@
                   />
                   <label class="form-check-label" for="paypal">PayPal</label>
                 </div> -->
-              </div>
+                            </div>
 
-              <div class="row gy-3">
-                <div class="col-md-6">
-                  <label for="cc-player" class="form-label">CC joueur</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="cc-player"
-                    placeholder=""
-                    required=""
-                  />
-                  <!-- <small class="text-body-secondary"
+                            <div class="row gy-3">
+                                <div class="col-md-6">
+                                    <label for="cc-player" class="form-label">CC joueur</label>
+                                    <input type="text" class="form-control" id="cc-player" placeholder="" required="" />
+                                    <!-- <small class="text-body-secondary"
                     >Full name as displayed on card</small
                   > -->
-                  <div class="invalid-feedback">CC requit</div>
+                                    <div class="invalid-feedback">CC requit</div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="cc-oppo" class="form-label">CC oposant</label>
+                                    <input type="text" class="form-control" id="cc-oppo" placeholder="" required="" />
+                                    <div class="invalid-feedback">
+                                        CC requit
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="res_pdice" class="form-label">Résultat des dès du joueur</label>
+                                    <input type="text" class="form-control" id="res_pdice" placeholder="" required="" />
+                                    <div class="invalid-feedback">Résultat requis</div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="res_odice" class="form-label">Résultat des dès de l'opposant</label>
+                                    <input type="text" class="form-control" id="res_odice" placeholder="" required="" />
+                                    <div class="invalid-feedback">Résultat requis</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="cc-j-advantage" class="form-label">Avantage(s) Utilisé(s) par le
+                                        joueur</label>
+                                    <input type="text" class="form-control" id="cc-j-advantage" placeholder=""
+                                        required="" />
+                                    <div class="invalid-feedback">Chiffre requis</div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="cc-o-advantage" class="form-label">Avantage(s) Utilisé(s) par
+                                        l'opposant</label>
+                                    <input type="text" class="form-control" id="cc-o-advantage" placeholder=""
+                                        required="" />
+                                    <div class="invalid-feedback">Chiffre requis</div>
+                                </div>
+                            </div>
+
+                            <hr class="my-4" />
+                            <a href="#show-result" rel="noopener noreferrer">
+                                <button class="w-100 btn btn-primary btn-lg" type="submit" id="btn-submit">
+                                    Voir le résultat
+                                </button>
+                            </a>
+
+                    </form>
                 </div>
+                <!-- end center -->
+            </div>
+        </main>
 
-                <div class="col-md-6">
-                  <label for="cc-oppo" class="form-label"
-                    >CC oposant</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="cc-oppo"
-                    placeholder=""
-                    required=""
-                  />
-                  <div class="invalid-feedback">
-                    CC requit
-                  </div>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="res_pdice" class="form-label"
-                    >Résultat des dès du joueur</label
-                  >
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="res_pdice"
-                    placeholder=""
-                    required=""
-                  />
-                  <div class="invalid-feedback">Résultat requis</div>
-                </div>
-
-                <div class="col-md-6">
-                  <label for="res_odice" class="form-label">Résultat des dès de l'opposant</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="res_odice"
-                    placeholder=""
-                    required=""
-                  />
-                  <div class="invalid-feedback">Résultat requis</div>
-                </div>
-                <div class="col-md-6">
-                    <label for="cc-j-advantage" class="form-label"
-                      >Avantage(s) Utilisé(s) par le joueur</label
-                    >
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="cc-j-advantage"
-                      placeholder=""
-                      required=""
-                    />
-                    <div class="invalid-feedback">Chiffre requis</div>
-                  </div>
-  
-                  <div class="col-md-6">
-                    <label for="cc-o-advantage" class="form-label">Avantage(s) Utilisé(s) par l'opposant</label>
-                    <input
-                      type="text"
-                      class="form-control"
-                      id="cc-o-advantage"
-                      placeholder=""
-                      required=""
-                    />
-                    <div class="invalid-feedback">Chiffre requis</div>
-                  </div>
-              </div>
-
-              <hr class="my-4" />
-
-              <button class="w-100 btn btn-primary btn-lg" type="submit" id="btn-submit">
-                Voir le résultat
-              </button>
-            </form>
-          </div>
-          <!-- end center -->
-        </div>
-      </main>
-
-      <footer class="my-5 pt-5 text-body-secondary text-center text-small">
-        <p class="mb-1">© 2023 Pierre-OlivierB</p>
-        <ul class="list-inline">
-          <li class="list-inline-item">
-            <a
-              href="https://github.com/Pierre-OlivierB/warhammerpresolutions"
-              target="_blank"
-              >Code Open Source</a
-            >
-          </li>
-        </ul>
-      </footer>
+        <footer class="my-5 pt-5 text-body-secondary text-center text-small">
+            <p class="mb-1">© 2023 Pierre-OlivierB</p>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="https://github.com/Pierre-OlivierB/warhammerpresolutions" target="_blank">Code Open
+                        Source</a>
+                </li>
+            </ul>
+        </footer>
     </div>
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="./index.js"></script>
-  </body>
+</body>
+
 </html>
