@@ -32,37 +32,29 @@ btnSubmit.addEventListener("click", (e) => {
   //   console.log("cc : " + pValue + oValue);
   //   console.log("dice : " + pdValue + odValue);
   //   console.log("a : " + paValue + oaValue);
+  console.log(evalCombat(pValue, oValue, pdValue, odValue, paValue, oaValue));
 });
 
-function combat(ccp, pd, pa) {
-  let pad = 0 + pa;
-  let ccpCombi = ccp + pad * 10;
-  let pComp = ccpCombi - pd;
-  let pav = parseInt(pComp / 10);
+function fight(cc, d, a) {
+  let ad = 0 + parseInt(a);
+  let ccCombi = parseInt(cc) + ad * 10;
+  let comp = ccCombi - parseInt(d);
+  console.log(ad, ccCombi, comp);
+  let pav = parseInt(comp / 10);
   return pav;
 }
 
 function evalCombat(ccp, cco, pd, od, pa, oa) {
-  //   let pad = 0 + pa;
-  //   let ccpCombi = ccp + pad * 10;
-  //   let pComp = ccpCombi - pd;
-  //   let pav = parseInt(pComp / 10);
-  //   console.log(pComp, pav);
-  let player = combat(ccp, pd, pa);
-  let oppo = combat(cco, od, oa);
-  //   let oad = 0 + oa;
-  //   let ccoCombi = cco + oad * 10;
-  //   let oComp = ccoCombi - od;
-  //   let oav = parseInt(oComp / 10);
-  //   console.log(oComp, oav);
+  let player = fight(ccp, pd, pa);
+  let oppo = fight(cco, od, oa);
 
   let res = player - oppo;
   return [player, oppo, res];
 }
-ccpTest = 10;
-pdTest = 30;
-paTest = 1;
-ccoTest = 20;
-odTest = 60;
-oaTest = 2;
-console.log(evalCombat(ccpTest, ccoTest, pdTest, odTest, paTest, oaTest));
+// ccpTest = 10;
+// pdTest = 30;
+// paTest = 1;
+// ccoTest = 20;
+// odTest = 60;
+// oaTest = 2;
+// console.log(evalCombat(ccpTest, ccoTest, pdTest, odTest, paTest, oaTest));
